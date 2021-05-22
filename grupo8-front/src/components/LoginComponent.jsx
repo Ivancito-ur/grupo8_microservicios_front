@@ -58,8 +58,10 @@ class LoginComponent extends Component {
     }
     handleChange(event) {
         this.setState({
-            [event.target.name]: event.target.value //el state y la forma de className tienen que ser ifuales
+            [event.target.name]: event.target.value //el state y la forma de className tienen que ser 
+            
         });
+        console.log("adios");
     }
 
 }
