@@ -23,10 +23,9 @@ class HeaderComponent extends Component {
                                 {!authenticated && <li><Link className="nav-link px-2 text-white" to="/">Nosotros</Link></li>}
                                 {!authenticated && <li><Link className="nav-link px-2 text-white" to="/">FAQs</Link></li>}
 
-
+                                {authenticated && <li><Link className="nav-link px-2 text-white" to="/perfil">Perfil</Link></li>}
                                 {authenticated && <li><Link className="nav-link px-2 text-white" to="/roles">Roles guardados</Link></li>}
                                 {authenticated && <li><Link className="nav-link px-2 text-white" to="/usuarios">Usuarios guardados</Link></li>}
-
                             </ul>
 
                             <div className="text-end">

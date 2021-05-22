@@ -10,7 +10,7 @@ class RolesRest {
         return axios.get(API_URL+URL_PETICION_ROL);
         
     }
-    deleteRol( id){
+    deleteRol(id){
         return axios.delete(API_URL+URL_PETICION_ROL+id);
     }
     
