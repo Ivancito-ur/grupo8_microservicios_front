@@ -46,7 +46,7 @@ class LoginComponent extends Component {
         console.log(this.state.password)
         AuthenticateService.executeJwtAuthenticationService(this.state.nickname, this.state.password)
         .then((response) => {
-                console.log()
+                console.log(response)
                 AuthenticateService.registerAuthenticationSuccesJwt(this.state.nickname,response.data.token);
                 this.props.history.push("/dashboard");
             }).catch((error) => {
