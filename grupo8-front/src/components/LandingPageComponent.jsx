@@ -31,8 +31,6 @@ class LandingPageComponent extends Component {
                     <FooterComponent></FooterComponent>
                 </Router>
             </div>
-        );
-      </div>
     );
   }
 }
