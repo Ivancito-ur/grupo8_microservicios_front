@@ -1,35 +1,37 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import AuthenticatedRoute from "../Autenticacion/AuthenticatedRouter";
-import DashboardComponent from "./DashboardComponent";
-import FooterComponent from "./FooterComponent";
-import HeaderComponent from "./HeaderComponent";
-import LoginComponent from "./LoginComponent";
-import RolesComponent from "./RolesComponent";
+
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import AuthenticatedRoute from '../Autenticacion/AuthenticatedRouter';
+import AuthenticateService from '../Autenticacion/AuthenticateService';
+import CarruselComponent from './CarruselComponent';
+import DashboardComponent from './DashboardComponent';
+import FooterComponent from './FooterComponent';
+import HeaderComponent from './HeaderComponent'
+import LoginComponent from './LoginComponent';
+import RolesComponent from './RolesComponent';
+import RegistroComponent from './RegistroComponent';
 import PagePerfilComponent from "./PagePerfilComponent";
 
-class LandingPageComponent extends Component {
-  render() {
-    return (
-      <div className="LandingPage">
-        <Router>
-          <HeaderComponent></HeaderComponent>
-          <Switch>
-            <Route path="/login" component={LoginComponent} />
-            <AuthenticatedRoute
-              path="/dashboard"
-              component={DashboardComponent}
-            />
-            <AuthenticatedRoute path="/roles" component={RolesComponent} />
-            <AuthenticatedRoute
-              path="/perfil"
-              component={PagePerfilComponent}
-            />
-          </Switch>
-          <FooterComponent></FooterComponent>
-        </Router>
 
-        <h3>PROYECTO MICRO SERVICIOS PAGINA LANDING PAGE</h3>
+class LandingPageComponent extends Component {
+    render() {
+        const authenticated = AuthenticateService.getAuthenticated();
+        return (
+            <div className="LandingPage">
+                <Router>
+                    <HeaderComponent></HeaderComponent>
+                    <Switch>
+                        <Route path="/inicio" component={CarruselComponent} />
+                        <Route path="/login" component={LoginComponent} />
+                        <AuthenticatedRoute path="/dashboard" component={DashboardComponent} />
+                        <AuthenticatedRoute path="/roles" component={RolesComponent} />
+                        <AuthenticatedRoute path="/perfil" component={PagePerfilComponent}/>
+                        <Route path="/registro" component={RegistroComponent}/>
+                    </Switch>
+                    <FooterComponent></FooterComponent>
+                </Router>
+            </div>
+        );
       </div>
     );
   }

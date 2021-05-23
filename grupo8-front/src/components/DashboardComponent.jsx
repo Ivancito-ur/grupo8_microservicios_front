@@ -9,8 +9,6 @@ class DashboardComponent extends Component {
         const authenticated = AuthenticateService.getAuthenticated();
         return(
             <div className="dashboardComponent">
-                <MenuComponent></MenuComponent>
-
                 <div className="container">
                     {authenticated && <span className='alert alert-info'>Bienvenido {AuthenticateService.getItem()} </span>}
                     </div>
