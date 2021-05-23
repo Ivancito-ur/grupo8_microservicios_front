@@ -21,7 +21,7 @@ class HeaderComponent extends Component {
                             <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                                 {!authenticated && (
                                     <li>
-                                        <Link className="nav-link px-2 text-white" to="/">
+                                        <Link className="nav-link px-2 text-white" to="/inicio">
                                             Inicio
                     </Link>
                                     </li>
