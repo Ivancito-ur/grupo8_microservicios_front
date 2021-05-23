@@ -32,7 +32,7 @@ class HeaderComponent extends Component {
                             <div className="text-end">
                                 {!authenticated && <Link type="button" className="btn btn-outline-light me-2" to="/login">Login</Link>}
                                 {authenticated && <Link type="button" to="/login" onClick={AuthenticateService.logout} className="btn btn-outline-light me-2" >Log out</Link>}
-                                {!authenticated && <Link type="button" className="btn btn-warning" to="/registro">Registro</Link>}
+                                {authenticated && <Link type="button" className="btn btn-warning" to="/registro">Registro</Link>}
 
                             </div>
                         </div>
