@@ -25,14 +25,14 @@ class HeaderComponent extends Component {
 
 
                                 {authenticated && <li><Link className="nav-link px-2 text-white" to="/roles">Roles guardados</Link></li>}
-                                {authenticated && <li><Link className="nav-link px-2 text-white" to="/usuarios">Usuarios guardados</Link></li>}
+                                {authenticated && <Link className="nav-link px-2 text-white" to="/registro">Registro usuario</Link>}
+                                {/* {authenticated && <li><Link className="nav-link px-2 text-white" to="/usuarios">Usuarios guardados</Link></li>} */}
 
                             </ul>
 
                             <div className="text-end">
                                 {!authenticated && <Link type="button" className="btn btn-outline-light me-2" to="/login">Login</Link>}
                                 {authenticated && <Link type="button" to="/login" onClick={AuthenticateService.logout} className="btn btn-outline-light me-2" >Log out</Link>}
-                                {authenticated && <Link type="button" className="btn btn-warning" to="/registro">Registro</Link>}
 
                             </div>
                         </div>
