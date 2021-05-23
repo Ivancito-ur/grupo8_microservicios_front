@@ -7,9 +7,7 @@ class RolesRest {
 
     listarRoles() {
 
-        return axios.get(API_URL + URL_PETICION_ROL).then(res => {
-            console.log(res);
-        });
+        return axios.get(API_URL + URL_PETICION_ROL);
 
     }
     deleteRol(id) {
