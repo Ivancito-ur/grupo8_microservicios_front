@@ -24,7 +24,7 @@ class LoginComponent extends Component {
                 {this.state.falloSesion && <div className="alert alert-danger"> No se puedo iniciar </div>}
                     <main className="form-signin">
                         <img className="mb-4" src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"></img>
-                        <h1 className="h3 mb-3 fw-normal">Inicio de sesion</h1>
+                        <h1 className="h3 mb-3 fw-normal">Inicio de sesión</h1>
                         <div className="form-floating">
                             <input type="text" className="form-control" name="nickname" id="nickname" onChange={this.handleChange}  placeholder="Nickname" autoComplete="off"></input>
                             <label htmlFor="floatingInput">Nickname</label>
