@@ -63,8 +63,8 @@ class HeaderComponent extends Component {
                                 )}
                                 {authenticated && (
                                     <li>
-                                        <Link className="nav-link px-2 text-white" to="/usuarios">
-                                            Usuarios guardados
+                                        <Link className="nav-link px-2 text-white" to="/registro">
+                                            Registrar Usuarios
                     </Link>
                                     </li>
                                 )}
