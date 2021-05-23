@@ -18,7 +18,7 @@ class HeaderComponent extends Component {
                                 height="50" width="50" />
                             </Link>
                             <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                                {!authenticated && <li><Link className="nav-link px-2 text-white" to="/">Inicio</Link></li>}
+                                {!authenticated && <li><Link className="nav-link px-2 text-white" to="/inicio">Inicio</Link></li>}
                                 {!authenticated && <li><Link className="nav-link px-2 text-white" to="/">Novedades</Link></li>}
                                 {!authenticated && <li><Link className="nav-link px-2 text-white" to="/">Nosotros</Link></li>}
                                 {!authenticated && <li><Link className="nav-link px-2 text-white" to="/">FAQs</Link></li>}
