@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { API_URL } from '../constants.js'
 import UsuarioRest from '../Api/UsuarioRest.js';
+import moment from 'moment';
 export const URL_PETICION_USUARIO = '/usuario'
 
 class RegistroComponent extends Component{
@@ -24,7 +25,8 @@ class RegistroComponent extends Component{
                 //nombre: this.nombreRef.current.value,
                 persona:{documento: this.documentoRef.current.value},
                 nickname: this.nicknameRef.current.value,
-                contraseña: this.contraseñaRef.current.value
+                contraseña: this.contraseñaRef.current.value,
+                ultimoAcceso: moment(new Date()).format('YYYY-MM-DD')
             }
         });
 

@@ -5,12 +5,10 @@ export const URL_PETICION_USUARIO = '/usuario'
 
 class UsuarioRest {
 
-    listarRoles() {
-
+    listarUsuario() {
         return axios.get(API_URL + URL_PETICION_USUARIO).then(res => {
             console.log(res);
         });
-
     }
     deleteRol(id) {
         return axios.delete(API_URL + URL_PETICION_USUARIO + id);
@@ -24,6 +22,7 @@ class UsuarioRest {
         return axios.put(API_URL + URL_PETICION_USUARIO);
     }
     addUsuario(usuario) {
+        console.log(API_URL+URL_PETICION_USUARIO)
         return axios.post(API_URL + URL_PETICION_USUARIO, usuario);
     }
 
