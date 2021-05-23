@@ -21,8 +21,9 @@ class RolesRest {
     updateRol(){
         return axios.put(API_URL+URL_PETICION_ROL);
     }
-    addRol(){
-        return axios.post(API_URL+URL_PETICION_ROL);
+    addRol(json){
+        console.log(json+"no agg");
+        return axios.post(API_URL+URL_PETICION_ROL, json);
     }
 
     
