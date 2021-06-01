@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import AuthenticateService from '../Autenticacion/AuthenticateService.js'
+import AuthenticateService from '../../Autenticacion/AuthenticateService.js'
 
-import "../../src/css/login.css"
+import "../../css/login.css"
 
 class LoginComponent extends Component {
 
