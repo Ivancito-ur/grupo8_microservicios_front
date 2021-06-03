@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { API_URL } from '../constants.js'
+import swal from 'sweetalert';
 
 export const URL_PETICION_USUARIO = '/usuario'
 
@@ -23,7 +24,9 @@ class UsuarioRest {
     }
     addUsuario(usuario) {
         console.log(API_URL+URL_PETICION_USUARIO)
-        return axios.post(API_URL + URL_PETICION_USUARIO, usuario);
+        return axios.post(API_URL + URL_PETICION_USUARIO, usuario).then(res =>{
+            swal("Usuario Registrado!", "Registro exitoso en Sinplafut", "success");
+        });
     }
 
 
