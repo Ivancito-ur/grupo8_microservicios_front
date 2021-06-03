@@ -25,11 +25,12 @@ class UsuarioRest {
     addUsuario(usuario) {
         console.log(API_URL+URL_PETICION_USUARIO)
         return axios.post(API_URL + URL_PETICION_USUARIO, usuario).then(res =>{
-            if(res == !null){
-                swal("Usuario Registrado!", "Registro exitoso en Sinplafut", "success");
-            }else{
-                swal("Usuario no registrado", "Verifica los datos", "error");
-            }
+            swal("Usuario Registrado!", "Registro exitoso en Sinplafut", "success");
+            // if(res == !null){
+            //     swal("Usuario Registrado!", "Registro exitoso en Sinplafut", "success");
+            // }else{
+            //     swal("Usuario no registrado", "Verifica los datos", "error");
+            // }
             
 
         });
