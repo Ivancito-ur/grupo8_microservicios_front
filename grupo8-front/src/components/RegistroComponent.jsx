@@ -3,7 +3,9 @@ import axios from 'axios'
 import { API_URL } from '../constants.js'
 import UsuarioRest from '../Api/UsuarioRest.js';
 import moment from 'moment';
+import '../css/footer.css';
 export const URL_PETICION_USUARIO = '/usuario'
+
 
 class RegistroComponent extends Component{
 
@@ -47,39 +49,42 @@ class RegistroComponent extends Component{
         UsuarioRest.addUsuario(this.state.usuario)
     }
 
+    
+
     render(){
         return(
             <div className="RegistroComponent">
-                <form  className="m-5" action="" onSubmit={this.saveUsuario}>
+                <form  className="m-5 formulario" action="" onSubmit={this.saveUsuario}>
                     <div className="container w-25 p-1 py-5">
                     <div className="mb-3 row">
-                    <label htmlFor="inputPassword" className="col-sm-2 col-form-label ">Nombre</label>
+                    <label htmlFor="inputPassword" className="col-sm-2 col-form-label formuRegistro">Nombre</label>
                     <div className="col-sm-10">
-                    <input type="text" className="form-control" id="inputPassword" ref= {this.nombreRef} onChange={this.changeState}/>
+                    <input type="text" className="form-control" id="inputPassword"  required="Debes introducir un nombre" ref= {this.nombreRef} onChange={this.changeState}/>
                     </div>
                 </div>
                 <div className="mb-3 row">
-                    <label htmlFor="inputPassword" className="col-sm-2 col-form-label ">Documento</label>
+                    <label htmlFor="inputPassword" className="col-sm-2 col-form-label  formuRegistro">Documento</label>
                     <div className="col-sm-10">
-                    <input type="text" className="form-control" id="inputPassword" ref= {this.documentoRef} onChange={this.changeState}/>
+                    <input type="text" className="form-control" id="inputPassword" required ref= {this.documentoRef} onChange={this.changeState}/>
                     </div>
                 </div>
                 <div className="mb-3 row">
-                    <label htmlFor="inputPassword" className="col-sm-2 col-form-label ">Nickname</label>
+                    <label htmlFor="inputPassword" className="col-sm-2 col-form-label formuRegistro">Nickname</label>
                     <div className="col-sm-10">
-                    <input type="text" className="form-control" id="inputPassword" ref= {this.nicknameRef} onChange={this.changeState}/>
+                    <input type="text" className="form-control" id="inputPassword" required ref= {this.nicknameRef} onChange={this.changeState}/>
                     </div>
                 </div>
                 <div className="mb-3 row">
-                    <label htmlFor="inputPassword" className="col-sm-2 col-form-label">Contraseña</label>
+                    <label htmlFor="inputPassword" className="col-sm-2 col-form-label formuRegistro">Contraseña</label>
                     <div className="col-sm-10">
-                    <input type="password" className="form-control" id="inputPassword" ref= {this.contraseñaRef} onChange={this.changeState}/>
+                    <input type="password" className="form-control" id="inputPassword" required ref= {this.contraseñaRef} onChange={this.changeState}/>
                     </div>
                 </div>
-                <div className="">
-                    <button type="submit" className="btn btn-primary m-5">Registrar</button>
-                    <button type="" className="btn btn-primary ">Limpiar</button>
+                <div className="botones">
+                    <button type="submit" className="btn btn-primary">Registrar</button>
+                    <button type="reset" className="btn btn-primary ">Limpiar</button>
                 </div>
+                
                 
                 </div>
 

@@ -3,3 +3,24 @@
   bottom: 0px !important;
   color: aquamarine;
 }
+
+.formulario{
+  height: 500px;
+ 
+}
+
+.formuRegistro{
+   padding: 5px;
+   margin: 3px;
+   font-size: 18px;
+}
+
+.botones{
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  margin: 15px;
+  
+}
