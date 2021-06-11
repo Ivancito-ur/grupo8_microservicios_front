@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import AuthenticateService from '../Autenticacion/AuthenticateService.js'
+import AuthenticateService from '../../Autenticacion/AuthenticateService.js'
 
-import "../../src/css/login.css"
+import "../../css/login.css"
 
 class LoginComponent extends Component {
 
@@ -58,7 +58,7 @@ class LoginComponent extends Component {
     }
     handleChange(event) {
         this.setState({
-            [event.target.name]: event.target.value //el state y la forma de className tienen que ser  
+            [event.target.name]: event.target.value //el state y la forma de className tienen que ser ifuales
         });
     }
 

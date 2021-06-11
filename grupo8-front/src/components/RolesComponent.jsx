@@ -79,7 +79,7 @@ class RolesComponent extends Component {
                                     <td>{aux.descripcion} </td>
                                     <td>{aux.permiso.id} </td>
                                     <td>{aux.permiso.nombre} </td>
-                                    <td>{ aux.permiso.autorizacion.toString()} </td>
+                                    <td>{aux.permiso.autorizacion} </td>
                                 </tr>
                             )}
                         </tbody>

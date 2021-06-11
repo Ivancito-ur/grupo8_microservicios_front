@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import AuthenticatedRoute from '../Autenticacion/AuthenticatedRouter';
@@ -10,7 +9,6 @@ import HeaderComponent from './HeaderComponent'
 import LoginComponent from './LoginComponent';
 import RolesComponent from './RolesComponent';
 import RegistroComponent from './RegistroComponent';
-import PagePerfilComponent from "./PagePerfilComponent";
 
 
 class LandingPageComponent extends Component {
@@ -25,14 +23,14 @@ class LandingPageComponent extends Component {
                         <Route path="/login" component={LoginComponent} />
                         <AuthenticatedRoute path="/dashboard" component={DashboardComponent} />
                         <AuthenticatedRoute path="/roles" component={RolesComponent} />
-                        <AuthenticatedRoute path="/perfil" component={PagePerfilComponent}/>
                         <Route path="/registro" component={RegistroComponent}/>
                     </Switch>
                     <FooterComponent></FooterComponent>
                 </Router>
             </div>
-    );
-  }
+        );
+
+    }
 }
 
 export default LandingPageComponent;
