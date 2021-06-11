@@ -7,13 +7,12 @@ class RolesRest {
 
     listarRoles() {
 
-        return axios.get(API_URL + URL_PETICION_ROL).then(res => {
-            console.log(res);
-        });
+        return axios.get(API_URL + URL_PETICION_ROL);
 
     }
-    deleteRol(id) {
-        return axios.delete(API_URL + URL_PETICION_ROL + id);
+
+    deleteRol(id){
+        return axios.delete(API_URL+URL_PETICION_ROL+id);
     }
 
     getRol(id) {
@@ -23,8 +22,9 @@ class RolesRest {
     updateRol() {
         return axios.put(API_URL + URL_PETICION_ROL);
     }
-    addRol() {
-        return axios.post(API_URL + URL_PETICION_ROL);
+
+    addRol(json){
+        return axios.post(API_URL+URL_PETICION_ROL, json);
     }
 
 
