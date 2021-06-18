@@ -27,6 +27,8 @@ class LandingPageComponent extends Component {
                     </Switch>
                     <FooterComponent></FooterComponent>
                 </Router>
+
+                
             </div>
         );
 

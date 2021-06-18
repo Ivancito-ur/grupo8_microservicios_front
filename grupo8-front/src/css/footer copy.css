@@ -16,23 +16,10 @@ body{
  
 }
 
-.input{
-
-  border: 1px solid whitesmoke !important;
-  border-radius: 5px !important;
-  width: 300px !important;
-  box-shadow: 1px 2px .5px 2px!important;
-
-
-}
-
-
 .formuRegistro{
    padding: 5px;
    margin: 3px;
    font-size: 18px;
-   font-weight: bold;
-   color: black;
 }
 
 .botones{

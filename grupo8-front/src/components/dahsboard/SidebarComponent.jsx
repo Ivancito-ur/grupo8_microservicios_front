@@ -3,6 +3,8 @@ import { Component } from 'react';
 import '../../css/material-dashboard.css'
 import '../../css/demo.css'
 import HeaderComponent from './HeaderComponent';
+import { Link } from "react-router-dom";
+import { withRouter } from "react-router";
 
 class SidebarComponent extends Component{
     render(){
@@ -19,61 +21,65 @@ class SidebarComponent extends Component{
       <div className="sidebar-wrapper ps-container ps-theme-default" data-ps-id="d54ac940-769c-c221-75bf-e503d71472e1">
         <ul className="nav">
           <li className="nav-item active  ">
-            <a className="nav-link" href="./dashboard.html">
+            <a className="nav-link" href="#">
               <i className="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
+
+          
           <li className="nav-item ">
-            <a className="nav-link" href="./user.html">
+            <Link className="nav-link" to="/registro">
               <i className="material-icons">person</i>
               <p>Agregar Persona - Usuario</p>
-            </a>
+            </Link>
           </li>
+        
+
           <li className="nav-item ">
-            <a className="nav-link" href="./tables.html">
+            <a className="nav-link" href="#">
               <i className="material-icons">content_paste</i>
               <p>Listar Personas</p>
             </a>
           </li>
           <li className="nav-item ">
-            <a className="nav-link" href="./typography.html">
+            <a className="nav-link" href="#">
               <i className="material-icons">vpn_key</i>
               <p>Agregar permisos</p>
             </a>
           </li>
           <li className="nav-item ">
-            <a className="nav-link" href="./map.html">
+            <a className="nav-link" href="#">
               <i className="material-icons">format_list_bulleted</i>
               <p>Listar Permisos</p>
             </a>
           </li>
           <li className="nav-item ">
-            <a className="nav-link" href="./icons.html">
+            <a className="nav-link" href="#">
               <i className="material-icons">people</i>
               <p>Agregar Rol</p>
             </a>
           </li>
           <li className="nav-item ">
-            <a className="nav-link" href="./notifications.html">
+            <a className="nav-link" href="#">
               <i className="material-icons">format_list_bulleted</i>
               <p>Listar Roles</p>
             </a>
           </li>
           <li className="nav-item ">
-            <a className="nav-link" href="./icons.html">
+            <a className="nav-link" href="#">
               <i className="material-icons">attractions</i>
               <p>Agregar Funcionalidades</p>
             </a>
           </li>
           <li className="nav-item ">
-            <a className="nav-link" href="./notifications.html">
+            <a className="nav-link" href="#">
               <i className="material-icons">format_list_bulleted</i>
               <p>Listar Funcionalidades</p>
             </a>
           </li>
           <li className="nav-item ">
-            <a className="nav-link" href="./rtl.html">
+            <a className="nav-link" href="#">
               <i className="material-icons">language</i>
               <p>RTL Support</p>
             </a>
@@ -87,4 +93,4 @@ class SidebarComponent extends Component{
         );
     }
 }
-export default SidebarComponent
+export default withRouter(SidebarComponent);
